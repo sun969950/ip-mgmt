@@ -1,0 +1,26 @@
+<div style="width:100%;overflow-y: auto;">
+    <fieldset class="fieldsetName">
+        <legend style="">查询条件</legend>
+        <div class="container-fluid">
+            <div style="float:left;">
+                <label style="float:left;margin-top: 5px;">用户名：</label>
+                <input type="text" ng-model="args.username" style="width:150px;float:left;"
+                       class="form-control"/>
+            </div>
+            <div style="float:left;margin-left: 5px;">
+                <label style="float:left;margin-top: 5px;">邮箱：</label>
+                <input type="text" ng-model="args.mailbox" style="width:150px;float:left;"
+                       class="form-control"/>
+            </div>
+            <div style="float:left;margin-left:15px;">
+                <button ng-click="search_mail()" class="btn btn-sm btn-info">查询</button>
+            </div>
+            <div style="float:right;margin-left:15px;">
+                <button ng-click="add_mail()" ng-disabled="isHasMail" class="btn btn-sm btn-primary">添加管理员邮箱</button>
+            </div>
+        </div>
+    </fieldset>
+    <div cw-adaptbody="100" ng-grid="gridOption"
+         style="width:100%;overflow-y: auto;overflow-x: hidden"></div>
+</div>
+

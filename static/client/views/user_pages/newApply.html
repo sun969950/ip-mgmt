@@ -1,0 +1,66 @@
+<div style="color: #333">
+    <div dragable dialog-title="{{ title }}">
+    </div>
+    <div style="margin-bottom: 10px;padding-top:15px;">
+        <div style="width:100%;padding:5px;" class="form-horizontal">
+            <div ng-if="!flag" class="form-group">
+                <label class="col-sm-3 control-label">IP资源池：</label>
+                <div class="col-sm-7">
+                    <select class="form-control" ng-model="applyObj.ip_pool_id" ng-options="i.id as i.text for i in ip_pool_list"></select>
+                </div>
+                <span class="text-danger mt5 fl">*</span>
+            </div>
+            <div ng-if="flag" class="form-group">
+                <label class="col-sm-3 control-label">IP资源池：</label>
+                <div class="col-sm-7">
+                    <input disabled type="text" class="form-control" ng-model="applyObj.ip_pool_name"/>
+                </div>
+                <span class="text-danger mt5 fl">*</span>
+            </div>
+            <div ng-if="applyObj.ipType=='00'" class="form-group">
+                <label class="col-sm-3 control-label">申请IP：</label>
+                <div class="col-sm-7">
+                    <input ng-disabled="flag" type="text" input-hint="多个IP中间请用英文逗号隔开" class="form-control"
+                           ng-model="applyObj.ips"/>
+                </div>
+                <span class="text-danger mt5 fl">*</span>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label">业务系统：</label>
+                <div class="col-sm-7">
+                    <input ng-disabled="flag" type="text" class="form-control" ng-model="applyObj.business"/>
+                </div>
+                <span class="text-danger mt5 fl">*</span>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label">申请理由：</label>
+                <div class="col-sm-7">
+                    <textarea ng-disabled="flag" class="form-control" ng-model="applyObj.apply_reason"
+                              input-hint="100个字以内"
+                              style="height: 60px !important;"/>
+                </div>
+                <span class="text-danger mt5 fl">*</span>
+            </div>
+            <div ng-if="isShow" class="form-group">
+                <label class="col-sm-3 control-label">拒绝理由：</label>
+                <div class="col-sm-7">
+                    <textarea ng-disabled="flag" class="form-control" ng-model="applyObj.refuse_reason"
+                              style="height: 60px !important;"/>
+                </div>
+            </div>
+        </div>
+        <div ng-if="!flag" style="text-align: center;">
+            <button class="btn btn-sm btn-info" ng-click="confirm()">
+                确定
+            </button>
+            <button style="margin-left: 10px;" class="btn btn-sm btn-default" ng-click="cancel()">
+                取消
+            </button>
+        </div>
+        <div ng-if="flag" style="text-align: center;">
+            <button style="margin-left: 10px;" class="btn btn-sm btn-default" ng-click="cancel()">
+                返回
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+<div style="width:100%;overflow-y: auto;">
+    <fieldset class="fieldsetName">
+        <legend style="">查询条件</legend>
+        <div class="container-fluid">
+            <div style="float:left;">
+                <label style="float:left;margin-top: 5px;">名称：</label>
+                <input type="text" ng-model="args.title" style="width:150px;float:left;"
+                       class="form-control"/>
+            </div>
+            <div style="float:left;margin-left: 10px">
+                <label style="float:left;margin-top: 5px;">网段：</label>
+                <input type="text" ng-model="args.ip_net" style="width:150px;float:left;"
+                       class="form-control"/>
+            </div>
+            <div style="float:left;margin-left:15px;">
+                <button ng-click="searchList()" class="btn btn-sm btn-info">查询</button>
+            </div>
+            <div style="float:right;margin-left:15px;">
+                <button ng-click="addObj()" class="btn btn-sm btn-primary">添加IP资源池</button>
+            </div>
+            <div style="float:right;margin-left:15px;">
+                <input id="uploadFile" style="display: none" onchange="angular.element(this).scope().uploadCsv()"
+                       name="uploadFile" type="file"/>
+                <button class="btn btn-sm btn-primary"
+                      onclick="document.getElementById('uploadFile').value = ''; document.getElementById('uploadFile').click();">
+                    导入资源池
+                </button>
+            </div>
+
+        </div>
+    </fieldset>
+    <div cw-adaptbody="100" ng-grid="gridOption"
+         style="width:100%;overflow-y: auto;overflow-x: hidden"></div>
+</div>
+

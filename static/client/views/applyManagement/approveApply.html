@@ -1,0 +1,25 @@
+<div style="color: #333">
+    <div dragable dialog-title="拒绝申请">
+    </div>
+    <div style="margin-bottom: 10px;padding-top:15px;">
+        <div style="width:100%;padding:5px;" class="form-horizontal">
+            <div class="form-group">
+                <label class="col-sm-3 control-label">拒绝理由：</label>
+                <div class="col-sm-7">
+                    <textarea class="form-control" ng-model="applyObj.refuse_reason"
+                              input-hint="100个字以内"
+                              style="height: 60px !important;"/>
+                </div>
+                <span class="text-danger mt5 fl">*</span>
+            </div>
+        </div>
+        <div style="text-align: center;">
+            <button style="margin-left: 10px;" class="btn btn-sm btn-primary" ng-click="refuse()">
+                提交
+            </button>
+            <button style="margin-left: 10px;" class="btn btn-sm btn-default" ng-click="cancel()">
+                取消
+            </button>
+        </div>
+    </div>
+</div>

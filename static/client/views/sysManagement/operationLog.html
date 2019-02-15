@@ -1,0 +1,33 @@
+<div style="width:100%;overflow-y: auto;">
+    <fieldset class="fieldsetName">
+        <legend style="">查询条件</legend>
+        <div class="container-fluid">
+            <div style="float:left;">
+                <label style="float:left;margin-top: 5px;">操作者：</label>
+                <input type="text" ng-model="filter.operator" style="width:150px;float:left;"
+                       class="form-control"/>
+            </div>
+            <div style="float:left;margin-left: 5px;">
+                <label style="float:left;margin-top: 5px;">操作类型：</label>
+                <input type="text" ng-model="filter.operateType" style="width:150px;float:left;"
+                       class="form-control"/>
+            </div>
+            <div style="float:left;margin-left: 5px;">
+                <label style="float:left;margin-top: 5px;">开始时间：</label>
+                <input type="text" ng-model="filter.whenStart" cw-datepicker style="width:150px;float:left;"
+                       class="form-control"/>
+            </div>
+            <div style="float:left;margin-left: 5px;">
+                <label style="float:left;margin-top: 5px;">结束时间：</label>
+                <input type="text" ng-model="filter.whenEnd" cw-datepicker style="width:150px;float:left;"
+                       class="form-control"/>
+            </div>
+            <div style="float:left;margin-left:15px;">
+                <button ng-click="SearchObj()" class="btn btn-sm btn-info">查询</button>
+            </div>
+        </div>
+    </fieldset>
+    <div cw-adaptbody="100" ng-grid="gridoption"
+         style="overflow-x: hidden; overflow-y: auto; width: 100%"></div>
+</div>
+

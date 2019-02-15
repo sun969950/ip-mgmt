@@ -1,0 +1,48 @@
+<div style="color: #333">
+    <div dragable dialog-title="{{ title }}">
+    </div>
+    <div style="margin-bottom: 10px;padding-top:15px;">
+        <div style="width:100%;padding:5px;" class="form-horizontal">
+            <div class="form-group">
+                <label class="col-sm-3 control-label">IP：</label>
+                <div class="col-sm-7">
+                    <input disabled type="text" class="form-control" ng-model="args.start_ip"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label">所属资源池：</label>
+                <div class="col-sm-7">
+                    <input disabled type="text" class="form-control" ng-model="args.ip_pool_name"/>
+                </div>
+            </div>
+            <div ng-if="args.is_used && !args.is_excluded" class="form-group">
+                <label class="col-sm-3 control-label">业务：</label>
+                <div class="col-sm-7">
+                    <input type="text" class="form-control" ng-model="args.business"/>
+                </div>
+            </div>
+            <div ng-if="args.is_used && !args.is_excluded" class="form-group">
+                <label class="col-sm-3 control-label">管理员：</label>
+                <div class="col-sm-7">
+                    <input type="text" class="form-control" ng-model="args.owner"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label">备注：</label>
+                <div class="col-sm-7">
+                    <textarea class="form-control" ng-model="args.description"
+                              input-hint="100个字以内"
+                              style="height: 60px !important;"/>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center;">
+            <button class="btn btn-sm btn-info" ng-click="confirm()">
+                确定
+            </button>
+            <button style="margin-left: 10px;" class="btn btn-sm btn-default" ng-click="cancel()">
+                取消
+            </button>
+        </div>
+    </div>
+</div>

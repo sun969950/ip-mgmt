@@ -1,0 +1,14 @@
+﻿<div  style="color: #333">
+    <div dragable dialog-title="错误">
+    </div>
+    <div style="margin: 15px;">
+        <ul>
+            <li style="list-style: disc; text-overflow: clip;" ng-repeat="i in errors">{{ i }}</li>
+        </ul>
+    </div>
+    <div style="text-align: center;margin-bottom: 15px;">
+        <button class="btn btn-sm btn-info" ng-click="confirm();">
+            关闭
+        </button>
+    </div>
+</div>

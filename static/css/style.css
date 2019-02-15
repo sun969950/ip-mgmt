@@ -1,0 +1,78 @@
+.header {
+    height: 66px;
+    background-color: black;
+    font-size: 14px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    /* overflow: hidden; */
+    z-index: 1000;
+    min-width: 1200px;
+    opacity: 0.3;
+    filter: alpha(opacity=30);
+}
+
+.header div + div {
+    background-color: rgba(0, 0, 0, .3);
+    height: 66px;
+}
+
+.header a.logo {
+    width: 400px;
+    height: 60px;
+    background-image: url(../img/logo.png);
+    background-size: auto 50px;
+    background-repeat: no-repeat;
+}
+
+.container .logo {
+    background-image: url(../img/logo.png);
+    background-size: auto 50px;
+    background-repeat: no-repeat;
+    padding-left: 200px;
+    margin-top: 5px;
+}
+
+.header .logo {
+    display: block;
+    margin: 6px 0 0 20px;
+}
+
+.link-group {
+    text-align: left;
+}
+
+.link-group .links {
+    height: 60px;
+    line-height: 60px;
+    padding: 0 18px;
+    display: inline-block;
+    color: #fff;
+    font-size: 18px;
+}
+
+.links {
+    /*width: 100px;*/
+    text-align: center;
+    /*background-color: rgba(47, 122, 167, 0.4);*/
+}
+
+.links:hover {
+    background-color: rgba(47, 122, 167, 1);
+}
+
+/*.newLinks {*/
+    /*background-color: rgba(47, 122, 167, 0.7);*/
+/*}*/
+
+.link-group a, .header .link-group span {
+    height: 60px;
+    line-height: 60px;
+    color: #fff;
+    display: inline-block;
+}
+
+.header div + div + div + div {
+    position: relative;
+    z-index: 2;
+}

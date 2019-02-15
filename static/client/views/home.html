@@ -1,0 +1,59 @@
+<div class="container-fluid" style="padding: 0;overflow-y: auto;overflow-x: hidden">
+    <div class="king-panel-container" style="overflow-y: auto;overflow-x: hidden">
+        <div class="row-home" style="overflow-y: auto;overflow-x: hidden">
+            <div class="col-md-3">
+                <div class="king-panel-item clearfix king-panel-success">
+                    <div class="king-panel-left king-padding">
+                        <i class="fa fa-align-left f30"></i>
+                    </div>
+                    <div class="king-panel-right king-padding">
+                        <span class="king-counter-number f24">{{ countObj.usableIPs }}</span>
+                        <div class="king-counter-label mt5">可用IP数</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="king-panel-item clearfix king-panel-warning">
+                    <div class="king-panel-left king-padding">
+                        <i class="fa fa-pie-chart f30"></i>
+                    </div>
+                    <div class="king-panel-right king-padding">
+                        <span class="king-counter-number f24">{{ countObj.usedIps }}</span>
+                        <div class="king-counter-label mt5">已用IP数</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="king-panel-item clearfix king-panel-primary">
+                    <div class="king-panel-left king-padding">
+                        <i class="fa fa-bars f30"></i>
+                    </div>
+                    <div class="king-panel-right king-padding">
+                        <span class="king-counter-number f24">{{ countObj.netIps }}</span>
+                        <div class="king-counter-label mt5">网段数</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="king-panel-item clearfix king-panel-info">
+                    <div class="king-panel-left king-padding">
+                        <i class="fa fa-bookmark-o f30"></i>
+                    </div>
+                    <div class="king-panel-right king-padding">
+                        <span class="king-counter-number f24">{{ countObj.excludedIPs }}</span>
+                        <div class="king-counter-label mt5">排除IP数</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row-home charts"  style="overflow-y: auto;overflow-x: hidden">
+        <div class="col-md-6" style="padding-top:10px">
+            <div cw-piechart="ipUsedReports" style="width: 100%;">
+            </div>
+        </div>
+        <div class="col-md-6" style="padding-top:10px">
+            <div highcharts="logReports" style="width:100%;"></div>
+        </div>
+    </div>
+</div>

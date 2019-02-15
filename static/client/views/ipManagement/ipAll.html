@@ -1,0 +1,69 @@
+<div style="width:100%;overflow-y: auto;">
+    <fieldset class="fieldsetName">
+        <legend style="">查询条件</legend>
+        <div class="container-fluid">
+            <div class="search-item">
+                <label>IP资源池：</label>
+                <select class="form-control" style="width: 150px;" ng-model="filterObj.ip_pools">
+                    <option value="">全部</option>
+                    <option ng-repeat="i in pool_list" value="{{ i.id }}">{{ i.name }}</option>
+                </select>
+            </div>
+            <div class="search-item">
+                <label>业务系统：</label>
+                <select class="form-control" style="width: 150px;" ng-model="filterObj.sys">
+                    <option value="">全部</option>
+                    <option ng-repeat="i in sys_list" value="{{ i.id }}">{{ i.name }}</option>
+                </select>
+            </div>
+            <div class="search-item">
+                <label>管理员：</label>
+                <input type="text" ng-model="filterObj.admin"
+                       class="form-control"/>
+            </div>
+            <div class="search-item">
+                <label>IP：</label>
+                <input type="text" ng-model="filterObj.ip"
+                       class="form-control"/>
+            </div>
+            <div class="search-item">
+                <label>工单号：</label>
+                <input type="text" ng-model="filterObj.work_order"
+                       class="form-control"/>
+            </div>
+            <div class="search-item">
+                <label>使用状态：</label>
+                <select class="form-control" style="width: 150px;" ng-model="filterObj.status">
+                    <option value="">全部</option>
+                    <option ng-repeat="i in status_list" value="{{ i.status }}">{{ i.name }}</option>
+                </select>
+            </div>
+            <div class="btn-div">
+                <button ng-click="searchList()" class="btn btn-sm btn-info">查询</button>
+            </div>
+        </div>
+    </fieldset>
+    <div cw-adaptbody="150" ng-grid="gridOption" style="width:100%;margin-top: 5px;"></div>
+</div>
+<style>
+    .search-item{
+        float: left;
+        margin:5px;
+        display: flex;
+        align-items: center;
+    }
+    .btn-div{
+        float:left;
+        margin:5px;
+    }
+    .btn-info{
+        margin-right: 50px;
+    }
+    .search-item label{
+        width:100px;
+        text-align: right;
+    }
+    .search-item input,.search-item input{
+        width:150px;
+    }
+</style>

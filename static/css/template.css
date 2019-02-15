@@ -1,0 +1,719 @@
+body {
+    font-family: 微软雅黑;
+}
+
+.bg-1 {
+    background: 85% 0% #438eb9 !important;
+    margin-bottom: 0px;
+    height: 60px;
+    border: none;
+    border-radius: 0;
+}
+
+.menu_left {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    min-width: 200px;
+    width: 18%;
+}
+
+.content_right {
+    padding: 2px;
+    overflow: auto;
+    float: left;
+    margin-left: 18%;
+    min-width: 950px;
+    height: 100%;
+    width: 82%;
+    background-color: #fff;
+}
+
+body.modal-open, .modal-open .navbar-fixed-top, .modal-open .navbar-fixed-bottom {
+    margin-right: 0px !important;
+}
+
+.title_right {
+    height: 80px;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(52, 71, 90, .09);
+
+}
+
+.user-info {
+    color: #fff;
+    font-size: 15px;
+    max-width: 85px;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: left;
+    vertical-align: top;
+    line-height: 16px;
+    position: relative;
+    top: 20px;
+    left: 10px;
+}
+
+#top_nav2 {
+    /*position: fixed;*/
+    width: 100%;
+    /*top: 66px;*/
+    /*left: 240px;*/
+    height: 35px;
+    color: #8A8A8A;
+    font-size: 14px;
+    padding-top: 9px;
+    padding-left: 5px;
+    background-color: #f2f2f2;
+    border-bottom: 1px solid #EDEDED;
+}
+
+.modal-header {
+    border-bottom: 1px solid #E5E5E5 !important;
+    /*border-radius: 4px;*/
+    background: #F8F8F8 !important;
+    /*color: #FFF !important;*/
+    padding-left: 10px !important;
+    padding-top: 1px !important;
+    height: 40px;
+}
+
+.modal-content {
+    border-radius: 0px !important;
+}
+
+/*ng-grid表格选中颜色*/
+.ngRow.selected {
+    /*background-color: #57b4e5 !important;*/
+}
+
+.dialogConfirm .modal-dialog {
+    width: 350px;
+    margin: 180px auto;
+}
+
+.dialogError .modal-dialog {
+    width: 500px;
+    margin: 100px auto;
+}
+
+.dialog_custom .modal-dialog {
+    margin: 180px auto;
+}
+
+.applyDialog .modal-dialog {
+    width: 600px;
+    margin: 100px auto;
+}
+
+table.bordertable {
+    text-align: center;
+    border-collapse: collapse;
+    border-width: 1px;
+    border-style: solid;
+    width: 100%;
+    table-layout: fixed;
+    /*word-wrap: break-word;*/
+}
+
+table.bordertable td {
+    font-size: 12px;
+    border-color: #b7d8df;
+    padding-left: 5px;
+    text-align: left;
+    border-width: 1px;
+    border-style: solid;
+    padding: 5px;
+}
+
+table.bordertable tr {
+    background-color: #f6f9fe;
+}
+
+table.bordertable th {
+    font-size: 12px;
+    font-weight: 400;
+    font-style: normal;
+    color: black;
+    text-align: left;
+    border: solid #b7d8df;
+    border-width: 1px;
+    padding: 5px 0px;
+    padding-left: 10px;
+    background-color: #e1f1fe;
+}
+
+.tableSearch td {
+    background-color: #fff !important;
+}
+
+.tableSearch th {
+    background-color: #6fb3e0 !important;
+    color: #fff !important;
+}
+
+.tableApply {
+    font-size: 13px;
+    width: 100%;
+    color: #333;
+}
+
+.tableApply td {
+    background-color: #fff !important;
+    padding-left: 5px;
+}
+
+.tableApply th {
+    background-color: #fff !important;
+    text-align: right;
+    padding-right: 10px;
+    font-weight: normal;
+    height: 35px;
+}
+
+.tableDns {
+    font-size: 13px;
+    width: 100%;
+    border-collapse: separate !important;
+}
+
+.tableDns th {
+    font-weight: normal;
+    height: 35px;
+    text-align: center;
+    background-color: #fff !important;
+}
+
+.tableDns td {
+    height: 35px;
+    text-align: center;
+    background-color: #fff !important;
+}
+
+.thWidth {
+    width: 120px;
+}
+
+table.applyFontsize {
+    text-align: center;
+    border-collapse: collapse;
+    border-width: 1px;
+    border-style: solid;
+    width: 100%;
+    table-layout: fixed;
+    /*word-wrap: break-word;*/
+}
+
+table.applyFontsize td {
+    height: 35px;
+    font-size: 14px;
+    border-color: #b7d8df;
+    padding-left: 5px;
+    text-align: left;
+    border-width: 1px;
+    border-style: solid;
+    padding: 5px;
+}
+
+table.applyFontsize tr {
+    background-color: #f6f9fe;
+}
+
+table.applyFontsize th {
+    height: 35px;
+    font-size: 14px;
+    font-weight: 400;
+    font-style: normal;
+    color: black;
+    text-align: left;
+    border: solid #b7d8df;
+    border-width: 1px;
+    padding: 5px 0px;
+    padding-left: 10px;
+    background-color: #e1f1fe;
+}
+
+.leftmenu {
+    display: block;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    z-index: 1;
+    background: #fafafa;
+    border: 1px solid #bfbfbf;
+}
+
+.leftmenu li a span {
+    padding-left: 50px;
+    display: block;
+    height: 20px;
+    line-height: 20px;
+    background-position: 20px center;
+    background-repeat: no-repeat;
+}
+
+.leftmenu li {
+    padding-bottom: 0px;
+    position: relative;
+}
+
+.leftmenu li a.menu_on, .leftmenu li a:hover {
+    background: #fff;
+    color: #0E90D2;
+    border-left: 2px solid #0E90D2;
+    margin-left: -2px;
+}
+
+.leftmenu li a, .leftmenu .submenu a {
+    display: block;
+    padding: 13px 0;
+    font-size: 15px;
+    color: #484848;
+    transition: all 0.2s ease 0s;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.leftmenu .submenu {
+    background: #ffffff;
+    border: 1px solid #ebebeb;
+    transition: all 0.2s ease 0s;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    right: -172px;
+    top: -1px;
+    width: 170px;
+}
+
+a.ember-view:focus, a.ember-view:hover {
+    text-decoration: none !important;
+}
+
+.textAlignCenter {
+    text-align: center;
+}
+
+.newtable .ngHeaderContainer {
+    font-weight: normal !important;
+    color: #444;
+    background-color: #F3F5F7;
+}
+
+.newtable .ngRow.even {
+    background-color: #fdfdfd;
+}
+
+.modal_open {
+    z-index: 10000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: -webkit-radial-gradient(50% 50%, ellipse closest-corner, rgba(0, 0, 0, 0.5) 1%, rgba(0, 0, 0, 0.8) 100%);
+    overflow-y: hidden;
+}
+
+.text-danger {
+    color: #a94442
+}
+
+.container {
+    min-width: 950px !important;
+}
+
+.td_table {
+    padding: 0px !important;
+    border: none !important;
+}
+
+.td_table table {
+    width: 100%;
+    border: none !important;
+}
+
+.td_table table td {
+    border-top: none !important;
+    border-bottom: 1px solid #ddd !important;
+    border-left: 1px solid #ddd !important;
+}
+
+.border-top th {
+    border-top: none !important;
+}
+
+.cw_input {
+    width: 117px;
+}
+
+.highcharts-yaxis-grid .highcharts-grid-line {
+    display: none;
+}
+
+.highcharts-label-box, .highcharts-data-label-box {
+    stroke: none;
+}
+
+.widget-toolbar > .dropdown > .dropdown-menu:after, .dropdown-menu.dropdown-caret:after {
+    left: 46px;
+}
+
+.widget-toolbar > .dropdown > .dropdown-menu:before, .dropdown-menu.dropdown-caret:before {
+    left: 45px;
+}
+
+.ngPagerButton {
+    height: 25px;
+    min-width: 26px;
+    background-color: #e1e1e1;
+    border-color: #ddd !important;
+}
+
+.trans_grid .ngViewport {
+    /*background-color: #222;*/
+    /*opacity: 0.5;*/
+    /*filter: alpha(opacity=50);*/
+    overflow-x: hidden !important;
+    color: #ddd;
+}
+
+.trans_grid > .ngFooterPanel {
+    background-color: rgba(67, 142, 185, 0.5) !important;
+}
+
+.grid_foot {
+    background-color: transparent;
+    height: 35px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+/*.ngViewport {*/
+/*min-height: 0px !important;*/
+/*}*/
+
+.trans_grid .ngHeaderScroller {
+    color: #fff;
+}
+
+/*ng-grid 样式调整*/
+.ngPagerButton {
+    height: 25px;
+    width: 26px;
+    border-color: #3278a0 !important;
+    color: #fff;
+    font-size: 12px;
+    background-color: #3278a0 !important;
+    opacity: 1 !important;
+    line-height: normal !important;
+    margin-top: -4px;
+    border: 1px;
+}
+
+.ngTotalSelectContainer {
+    margin-top: 6px;
+}
+
+.ngHeaderContainer {
+    background-color: #5ea5d4 !important;
+}
+
+.ngPagerContainer {
+    margin-top: 5px !important;
+}
+
+.ngFooterPanel {
+    background-color: #438eb9 !important;
+    color: #fff;
+}
+
+.ngFooterPanel select, .ngFooterPanel input[type=number] {
+    color: #858585
+}
+
+.trans_grid .ngHeaderContainer {
+    background-color: #438eb9 !important;
+}
+
+.bg_c {
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    min-width: 1200px;
+
+    /*min-height: 675px;*/
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(255, 0, 0, .4)
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    background-color: rgba(255, 255, 255, .07)
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(11, 54, 106, .52);
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .5)
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+    background-color: rgba(255, 255, 255, .07)
+}
+
+.trans_grid .ngRow.even {
+    background-color: transparent;
+}
+
+.trans_grid .ngFooterPanel {
+}
+
+.simple_btn {
+    border: none !important;
+    background-color: transparent !important;
+}
+
+.icon_menu {
+    width: 120px;
+    float: left;
+    height: 100%;
+    text-align: center;
+    padding-top: 8px;
+}
+
+.icon_menu:hover {
+    cursor: pointer;
+    background-color: #243a82;
+}
+
+a {
+    color: blue;
+    outline: none;
+    padding-left: 3px;
+    padding-right: 3px;
+    text-decoration: none;
+    font-size: small;
+    cursor: pointer;
+}
+
+.form-group {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.ui-datepicker {
+    color: #333;
+}
+
+.form-control {
+    height: 30px !important;
+    padding: 6px !important;
+}
+
+.fa-icon {
+    opacity: 0.9;
+    width: 20px;
+}
+
+.fa-icon:hover {
+    opacity: 5;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.modal-open .modal {
+    overflow: hidden !important;
+}
+
+.check_btn {
+    float: left !important;
+    margin-left: 5px !important;
+    height: 26px !important;
+    padding: 3px 10px !important;
+    margin-top: 2px !important;
+    font-size: 12px !important;
+    border-radius: 0 !important;
+}
+
+.ngViewport {
+    overflow-x: hidden;
+}
+
+input[readonly] {
+    background-color: #fff !important;
+}
+
+@font-face {
+    font-family: io-cloudj;
+    src: url(../fonts/iconfont.eot?t=1466047328);
+    src: url(../fonts/iconfont.eot?t=1466047328#iefix) format('embedded-opentype'), url(../fonts/iconfont.woff?t=1466047328) format('woff'), url(../fonts/iconfont.ttf?t=1466047328) format('truetype'), url(../fonts/iconfont.svg?t=1466047328#iconfont) format('svg')
+}
+
+.io-fa {
+    font-family: io-cloudj !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: .2px;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.icon-logoutcloudboot:before {
+    content: "\e611";
+    font-size: 35px
+}
+
+.label-btn {
+    cursor: pointer;
+
+}
+
+.user-container {
+    overflow-y: hidden;
+    position: absolute;
+    top: 60px;;
+    bottom: 0;
+    width: 100%;
+    background-color: #fff;
+}
+
+.ui-content-main {
+    width: 95%;
+    height: 100%;
+    position: relative;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.fieldsetName {
+    border: 1px solid #ADD8E6;
+    padding: 5px;
+    margin-bottom: 10px;
+    padding-bottom: 13px;
+}
+
+.fieldsetName legend {
+    background-color: transparent;
+    margin-bottom: 0px;
+    font-size: 13px;
+    width: 62.5px;
+    padding-left: 5px;
+}
+
+.input-group .form-control {
+    line-height: 1.42857143;
+    color: #555;
+    background-image: none;
+    border: 1px solid #ccc;
+}
+
+.panel-search {
+    background-color: #fafafa !important;
+    color: #333 !important;
+    padding: 10px 15px !important;
+}
+
+.table {
+    border-collapse: collapse !important
+}
+
+.table td, .table th {
+    background-color: #fff !important
+}
+
+.table-bordered td, .table-bordered th {
+    border: 1px solid #ddd !important
+}
+
+.row-home {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.clearfix {
+    display: block;
+    zoom: 1;
+}
+
+.king-panel-item {
+    color: #FFF;
+    text-align: center;
+}
+
+.king-padding {
+    padding: 20px 0;
+    float: left;
+    height: 100px;
+}
+.king-panel-left {
+    padding: 30px 0 !important;
+}
+
+
+.king-panel-primary .king-panel-left {
+    width: 30%;
+    background: #7270A8;
+}
+
+.king-panel-primary .king-panel-right {
+    width: 70%;
+    background: #7C79B6;
+}
+
+.king-panel-info .king-panel-left {
+    width: 30%;
+    background: #4A9BFF;
+}
+
+.king-panel-info .king-panel-right {
+    width: 70%;
+    background: #64a9ff;
+}
+
+.king-panel-success .king-panel-left {
+    width: 30%;
+    background: #44B549;
+}
+
+.king-panel-success .king-panel-right {
+    width: 70%;
+    background: #54bf59;
+}
+
+.king-panel-warning .king-panel-left {
+    width: 30%;
+    background: #f3b760;
+}
+
+.king-panel-warning .king-panel-right {
+    width: 70%;
+    background: #f5c278;
+}
+
+.f24 {
+    font-size: 24px !important;
+}
+
+.mt5 {
+    margin-top: 5px !important;
+}
+
+.f30 {
+    font-size: 30px !important;
+}
+
+.fa18 {
+    font-size: 18px !important;
+}

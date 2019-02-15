@@ -1,0 +1,96 @@
+<div class="addIPPool">
+    <div dragable dialog-title="{{ title }}"></div>
+    <div style="width: 100%;padding: 30px 20px 20px 30px;">
+        <div class="form-horizontal">
+            <div class="form-group">
+                <label class="col-sm-3 control-label">名称：</label>
+                <div class="col-sm-8">
+                    <input class="form-control" style="width: 250px;" ng-model="args.title">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label">网段：</label>
+                <div class="col-sm-8">
+                    <input ng-disabled="title == '修改IP资源池'" class="form-control" style="width: 250px;"
+                           ng-model="args.ip_net" input-hint="如：192.168.0.0/24">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label">掩码：</label>
+                <div class="col-sm-8">
+                    <input type="text"  class="form-control" style="width: 250px;"
+                           ng-model="args.mask">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label">网关：</label>
+                <div class="col-sm-8">
+                    <input type="test" class="form-control" style="width: 250px;"
+                           ng-model="args.gateway">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label">阈值：</label>
+                <div class="col-sm-8">
+                    <input type="number" min="0" max="100" class="form-control" style="width: 250px;"
+                           ng-model="args.threshold">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label">区间：</label>
+                <div class="col-sm-8" style="margin-bottom: 15px;">
+                    <table>
+                        <tr ng-repeat="i in args.interval_list">
+                            <td style="padding-bottom: 5px;">
+                                <input ng-disabled="i.ip_start!=''&& title == '修改IP资源池' && i.status=='old'"
+                                       class="form-control" style="width: 110px;float:left;" ng-model="i.ip_start"
+                                       input-hint="如：192.168.0.1">
+                                <span style="float: left;margin: 0 9px;line-height: 30px;">至</span>
+                                <input ng-disabled="i.ip_start!='' && title == '修改IP资源池' && i.status=='old'"
+                                       class="form-control" style="width: 109px;float: left;"
+                                       ng-model="i.ip_end"
+                                       input-hint="如：192.168.0.5">
+                            <td>
+                            <td style="padding-left: 10px;font-size: 12px;">
+                                <i class='fa fa-2x fa-plus-circle' ng-click='add_interval()'
+                                   style="cursor: pointer"></i>
+                                <i ng-if="title != '修改IP资源池'" class='fa fa-2x fa-minus-circle'
+                                   style='padding-left: 10px;cursor: pointer'
+                                   ng-click='minus_interval(i)'></i>
+                                <i ng-if="title == '修改IP资源池' && i.status!='old'" class='fa fa-2x fa-minus-circle'
+                                   style='padding-left: 10px;cursor: pointer'
+                                   ng-click='minus_interval(i)'></i>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">排除IP：</label>
+                    <div class="col-sm-8">
+                        <table>
+                            <tr ng-repeat="i in args.excute_range">
+                                <td style="padding-bottom: 5px;">
+                                    <input class="form-control" style="width: 110px;float:left;" ng-model="i.ip_start" input-hint="如：192.168.0.1">
+                                    <span style="float: left;margin: 0 9px;line-height: 30px;">至</span>
+                                    <input class="form-control" style="width: 109px;float: left;"  ng-model="i.ip_end" input-hint="如：192.168.0.5">
+                                <td>
+                                <td style="padding-left: 10px;font-size: 12px;">
+                                    <i class='fa fa-2x fa-plus-circle' ng-click='add_list()' style="cursor: pointer"></i>
+                                    <i class='fa fa-2x fa-minus-circle' style='padding-left: 10px;cursor: pointer' ng-click='minus_list(i)'></i>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center;margin-top: 10px;">
+                <button class="btn btn-sm btn-info" ng-click="confirm()">
+                    确认
+                </button>
+                <button style="margin-left: 20px;" class="btn btn-sm btn-message" ng-click="cancel()">
+                    取消
+                </button>
+            </div>
+        </div>
+    </div>
+

@@ -1,0 +1,5 @@
+<a ng-click="selectValue(member)"><span>{{ member.name }}</span></a>
+<ul>
+    <li ng-class="{'active':selectItem.id === member.id}"
+        ng-repeat="member in member[options.childrenParam] track by member.id" ng-include="subLevelHtml"></li>
+</ul>

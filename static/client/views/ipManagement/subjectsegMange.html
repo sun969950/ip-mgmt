@@ -1,0 +1,21 @@
+<div style="width:100%;overflow-y: auto;">
+    <fieldset class="fieldsetName">
+        <legend style="">查询条件</legend>
+        <div class="container-fluid">
+            <div style="float:left;">
+                <label style="float:left;margin-top: 5px;">IP地址：</label>
+                <input type="text" ng-model="filterObj.ip" style="width:150px;float:left;"
+                       class="form-control"/>
+            </div>
+            <div style="float:left;margin-left: 5px;">
+                <label style="float:left;margin-top: 5px;">业务系统：</label>
+                <input type="text" ng-model="filterObj.business" style="width:150px;float:left;"
+                       class="form-control"/>
+            </div>
+            <div style="float:left;margin-left:15px;">
+                <button ng-click="searchList()" class="btn btn-sm btn-info">查询</button>
+            </div>
+        </div>
+    </fieldset>
+    <div cw-adaptbody="100" ng-grid="gridOption" style="width:100%;margin-top: 5px;"></div>
+</div>

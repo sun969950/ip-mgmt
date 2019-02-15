@@ -1,0 +1,28 @@
+<div>
+    <div dragable dialog-title="{{ title }}"></div>
+    <div style="width: 100%;padding: 30px 20px 20px 30px;">
+        <div class="form-horizontal">
+            <div class="form-group">
+                <label class="col-sm-3 control-label">用户名：</label>
+                <div class="col-sm-8">
+                    <input class="form-control" style="width: 250px;" ng-model="args.username" input-hint="用户名">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label">邮箱地址：</label>
+                <div class="col-sm-8">
+                    <input class="form-control" type="text" style="width: 250px;" ng-model="args.mailbox"
+                           input-hint="请输入邮箱地址">
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center;margin-top: 10px;">
+            <button class="btn btn-sm btn-info" ng-click="confirm()">
+                确认
+            </button>
+            <button style="margin-left: 20px;" class="btn btn-sm btn-message" ng-click="cancel()">
+                取消
+            </button>
+        </div>
+    </div>
+</div>
